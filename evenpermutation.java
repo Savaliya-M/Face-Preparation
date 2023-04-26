@@ -14,7 +14,6 @@ public class evenpermutation {
                     count++;
                 }
             }
-
             m = 0;
             return;
         }
@@ -31,8 +30,11 @@ public class evenpermutation {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter low : ");
         int low = sc.nextInt();
+        System.out.print("Enter high : ");
         int high = sc.nextInt();
+        System.out.print("Enter how much digit you want in a number : ");
         int r = sc.nextInt();
         ArrayList<Integer> arr = new ArrayList<>();
         for (int i = low; i <= high; i++) {
@@ -42,9 +44,9 @@ public class evenpermutation {
         ArrayList<Integer> sol = new ArrayList<>();
         helper(arr, sol, 0, r);
         if (count % 2 == 0) {
-            System.out.println(count);
+            System.out.println("Total even permutation = " + count);
         } else {
-            System.out.println("Invalid input");
+            System.out.println("Invalid input(odd count)");
         }
     }
 }
