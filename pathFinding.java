@@ -5,7 +5,7 @@ public class pathFinding {
         for (ArrayList<Integer> cell : path) {
             System.out.print("(" + cell.get(0) + " , " + cell.get(1) + ")");
         }
-        System.out.print("(" + mat.length + " , " + mat[0].length + ")");
+        System.out.print("(" + (mat.length - 1) + " , " + (mat[0].length - 1) + ")");
         System.out.println();
     }
 
@@ -38,14 +38,16 @@ public class pathFinding {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Rows : ");
         int r = sc.nextInt();
+        System.out.print("Enter Column : ");
         int c = sc.nextInt();
         int arr[][] = new int[r][c];
 
         List<ArrayList<Integer>> path = new ArrayList<ArrayList<Integer>>();
         int count = 0;
         int result = findpath(arr, path, 0, 0, count);
-        System.out.println(result);
+        System.out.println("Total possible path = " + result);
 
     }
 }
