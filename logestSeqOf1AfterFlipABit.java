@@ -1,6 +1,6 @@
 public class logestSeqOf1AfterFlipABit {
     public static void main(String[] args) {
-        int n = Integer.MAX_VALUE, count = 0, max = 0, pre = 0;
+        int n = Integer.MIN_VALUE, count = 0, max = 0, pre = 0;
 
         while (n > 0) {
             if ((n & 1) == 1) {
